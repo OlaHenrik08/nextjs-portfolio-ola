@@ -1,26 +1,102 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-body: "DM Sans", sans-serif;
+  --font-display: "Playfair Display", serif;
+  --color-bg: #0a0a0a;
+  --color-surface: #141414;
+  --color-surface-hover: #1a1a1a;
+  --color-border: #2a2a2a;
+  --color-border-hover: #3d3d3d;
+  --color-text: #e8e6e1;
+  --color-text-muted: #7a7872;
+  --color-text-subtle: #4a4842;
+  --color-accent: #c8a96e;
+  --color-accent-dim: rgba(200, 169, 110, 0.12);
+  --color-accent-glow: rgba(200, 169, 110, 0.25);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Grain overlay for texture */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-hover);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-sm font-medium
+           bg-(--color-accent) text-[#0a0a0a]
+           rounded-sm transition-all duration-300
+           hover:shadow-lg hover:shadow-(--color-accent-glow)
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 text-sm font-medium
+           text-(--color-text) border border-(--color-border)
+           rounded-sm transition-all duration-300
+           hover:border-(--color-accent) hover:text-(--color-accent)
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .card {
+    @apply relative bg-(--color-surface) border border-(--color-border)
+           rounded-sm transition-all duration-500
+           hover:border-(--color-border-hover);
+  }
+
+  .tag {
+    @apply inline-block px-3 py-1 text-xs font-medium tracking-wide uppercase
+           bg-(--color-accent-dim) text-(--color-accent)
+           border border-(--color-accent-dim) rounded-sm;
+  }
+
+  .section-label {
+    @apply text-xs font-medium tracking-widest uppercase text-(--color-accent) mb-4;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#c8a96e] via-[#d4bf8a] to-[#c8a96e] bg-clip-text text-transparent;
+  }
 }
