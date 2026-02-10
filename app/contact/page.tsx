@@ -24,7 +24,7 @@ const contactDetails = [
   },
   {
     label: "GitHub",
-    value: "github.com/yourusername",
+    value: "github.com/OlaHenrik08",
     href: "https://github.com/OlaHenrik08",
     icon: "⌂",
   },
