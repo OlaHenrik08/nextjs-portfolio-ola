@@ -114,6 +114,90 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
+         {/* Divider */}
+        <div className="border-t border-[#2a3334] mb-24" />
+
+        {/* Min bedrift */}
+        <div className="mb-24">
+          <p className="section-label">Min bedrift</p>
+          <h2 className="text-3xl font-display text-[#e8e6e1] mb-10">
+            Digital Solutions
+          </h2>
+          
+          <div className="card p-8 border-[#7a4a35]/30">
+            <div className="flex items-start justify-between mb-6">
+              <div>
+                <h3 className="text-2xl font-display text-[#e8e6e1] mb-2">
+                  Digital Solutions
+                </h3>
+                <p className="text-[#7a4a35] text-sm tracking-wide uppercase">
+                  Building Smart Solutions
+                </p>
+              </div>
+              <span className="px-4 py-1.5 bg-[#7a4a35]/20 border border-[#7a4a35] text-[#7a4a35] text-xs tracking-widest uppercase rounded-sm">
+                Coming Soon
+              </span>
+            </div>
+
+            <div className="space-y-4 mb-6">
+              <p className="text-[#7a8182] leading-relaxed">
+                Digital Solutions er min egen bedrift som spesialiserer seg på å bygge 
+                profesjonelle nettsider for bedrifter som ikke har tid, ferdigheter eller 
+                ressurser til å gjøre det selv. Vi forstår at ikke alle er teknisk anlagt, 
+                og det er nettopp derfor vi er her.
+              </p>
+              <p className="text-[#7a8182] leading-relaxed">
+                Vår visjon er enkel: gjøre profesjonell web-tilstedeværelse tilgjengelig 
+                for alle. Vi lager skreddersydde nettsider tilpasset dine forretningsbehov, 
+                og tilbyr enkel IT-støtte når du trenger hjelp — alt tilgjengelig gjennom 
+                enkle telefonsamtaler.
+              </p>
+            </div>
+
+            {/* Services */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#2a3334]">
+              <div className="flex items-start gap-3">
+                <span className="text-[#7a4a35] text-lg">🌐</span>
+                <div>
+                  <h4 className="text-[#e8e6e1] text-sm font-medium mb-1">Website Creation</h4>
+                  <p className="text-[#4a5455] text-xs">Skreddersydde nettsider for din bedrift</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-[#7a4a35] text-lg">📱</span>
+                <div>
+                  <h4 className="text-[#e8e6e1] text-sm font-medium mb-1">IT Phone Support</h4>
+                  <p className="text-[#4a5455] text-xs">Rask teknisk hjelp over telefon</p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-[#7a4a35] text-lg">🔧</span>
+                <div>
+                  <h4 className="text-[#e8e6e1] text-sm font-medium mb-1">Maintenance</h4>
+                  <p className="text-[#4a5455] text-xs">Oppdateringer og vedlikehold</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Launch note */}
+            <div className="mt-6 pt-6 border-t border-[#2a3334]">
+              <p className="text-[#4a5455] text-sm italic">
+                Nettsiden for Digital Solutions er under utvikling og vil bli lansert snart.
+              </p>
+              {/* Uncomment this when the website is live:
+              <Link
+                href="https://yourwebsite.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#7a4a35] hover:text-[#8a6a55] text-sm mt-3 transition-colors duration-300"
+              >
+                Besøk Digital Solutions
+                <span>→</span>
+              </Link>
+              */}
+            </div>
+          </div>
+        </div>
 
         {/* Divider */}
         <div className="border-t border-[#2a2a2a] mb-24" />
@@ -163,6 +247,7 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
+        
 
         {/* Divider */}
         <div className="border-t border-[#2a2a2a] mb-24" />
