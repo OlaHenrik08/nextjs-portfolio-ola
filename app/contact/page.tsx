@@ -25,7 +25,7 @@ const contactDetails = [
   {
     label: "GitHub",
     value: "github.com/yourusername",
-    href: "https://github.com/yourusername",
+    href: "https://github.com/OlaHenrik08",
     icon: "⌂",
   },
 ];
@@ -82,7 +82,7 @@ export default function ContactPage() {
               </p>
               <Link
                 href="/cv.pdf"
-                download="CV_OlaHenrik_Bjørntvedt.pdf"
+                download="cv (1).pdf"
                 className="btn-outline"
               >
                 Last ned CV

@@ -2,9 +2,8 @@ import Link from "next/link";
 
 export default function Footer() {
   const socials = [
-    { label: "GitHub", href: "https://github.com/yourusername" },
-    { label: "LinkedIn", href: "https://linkedin.com/in/yourusername" },
-    { label: "Email", href: "mailto:olahenrik08@gmail.com" },
+    { label: "GitHub", href: "https://github.com/OlaHenrik08" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/ola-henrik-bj%C3%B8rntvedt-582164388/e" },
   ];
 
   return (
