@@ -114,8 +114,8 @@ export default function AboutPage() {
             </p>
           </div>
         </div>
-         {/* Divider */}
-        <div className="border-t border-[#2a3334] mb-24" />
+        {/* Divider */}
+        <div className="border-t border-[#2a2a2a] mb-24" />
 
         {/* Min bedrift */}
         <div className="mb-24">
@@ -124,29 +124,25 @@ export default function AboutPage() {
             Digital Solutions
           </h2>
           
-          <div className="card p-8 border-[#7a4a35]/30">
-            <div className="flex items-start justify-between mb-6">
+          <div className="card group p-6 hover:border-[#c8a96e]/30 transition-colors duration-500">
+            <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3 mb-3">
               <div>
-                <h3 className="text-2xl font-display text-[#e8e6e1] mb-2">
-                  Digital Solutions
-                </h3>
-                <p className="text-[#7a4a35] text-sm tracking-wide uppercase">
-                  Building Smart Solutions
-                </p>
+                <h3 className="text-lg font-display text-[#e8e6e1]">Digital Solutions</h3>
+                <p className="text-[#c8a96e] text-sm mt-0.5">Building Smart Solutions</p>
               </div>
-              <span className="px-4 py-1.5 bg-[#7a4a35]/20 border border-[#7a4a35] text-[#7a4a35] text-xs tracking-widest uppercase rounded-sm">
+              <span className="text-xs text-[#4a4842] font-mono bg-[#141414] border border-[#2a2a2a] px-3 py-1.5 rounded-sm whitespace-nowrap">
                 Coming Soon
               </span>
             </div>
 
-            <div className="space-y-4 mb-6">
-              <p className="text-[#7a8182] leading-relaxed">
+            <div className="space-y-3 mb-4">
+              <p className="text-[#7a7872] text-sm leading-relaxed">
                 Digital Solutions er min egen bedrift som spesialiserer seg på å bygge 
                 profesjonelle nettsider for bedrifter som ikke har tid, ferdigheter eller 
                 ressurser til å gjøre det selv. Vi forstår at ikke alle er teknisk anlagt, 
                 og det er nettopp derfor vi er her.
               </p>
-              <p className="text-[#7a8182] leading-relaxed">
+              <p className="text-[#7a7872] text-sm leading-relaxed">
                 Vår visjon er enkel: gjøre profesjonell web-tilstedeværelse tilgjengelig 
                 for alle. Vi lager skreddersydde nettsider tilpasset dine forretningsbehov, 
                 og tilbyr enkel IT-støtte når du trenger hjelp — alt tilgjengelig gjennom 
@@ -155,49 +151,39 @@ export default function AboutPage() {
             </div>
 
             {/* Services */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#2a3334]">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-[#2a2a2a]">
               <div className="flex items-start gap-3">
-                <span className="text-[#7a4a35] text-lg">🌐</span>
+                <span className="text-[#c8a96e] text-lg">🌐</span>
                 <div>
                   <h4 className="text-[#e8e6e1] text-sm font-medium mb-1">Website Creation</h4>
-                  <p className="text-[#4a5455] text-xs">Skreddersydde nettsider for din bedrift</p>
+                  <p className="text-[#7a7872] text-xs">Skreddersydde nettsider for din bedrift</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-[#7a4a35] text-lg">📱</span>
+                <span className="text-[#c8a96e] text-lg">📱</span>
                 <div>
                   <h4 className="text-[#e8e6e1] text-sm font-medium mb-1">IT Phone Support</h4>
-                  <p className="text-[#4a5455] text-xs">Rask teknisk hjelp over telefon</p>
+                  <p className="text-[#7a7872] text-xs">Rask teknisk hjelp over telefon</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-[#7a4a35] text-lg">🔧</span>
+                <span className="text-[#c8a96e] text-lg">🔧</span>
                 <div>
                   <h4 className="text-[#e8e6e1] text-sm font-medium mb-1">Maintenance</h4>
-                  <p className="text-[#4a5455] text-xs">Oppdateringer og vedlikehold</p>
+                  <p className="text-[#7a7872] text-xs">Oppdateringer og vedlikehold</p>
                 </div>
               </div>
             </div>
 
             {/* Launch note */}
-            <div className="mt-6 pt-6 border-t border-[#2a3334]">
-              <p className="text-[#4a5455] text-sm italic">
+            <div className="mt-4 pt-4 border-t border-[#2a2a2a]">
+              <p className="text-[#7a7872] text-sm italic">
                 Nettsiden for Digital Solutions er under utvikling og vil bli lansert snart.
               </p>
-              {/* Uncomment this when the website is live:
-              <Link
-                href="https://yourwebsite.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#7a4a35] hover:text-[#8a6a55] text-sm mt-3 transition-colors duration-300"
-              >
-                Besøk Digital Solutions
-                <span>→</span>
-              </Link>
-              */}
             </div>
           </div>
         </div>
+
 
         {/* Divider */}
         <div className="border-t border-[#2a2a2a] mb-24" />
