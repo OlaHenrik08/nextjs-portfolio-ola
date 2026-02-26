@@ -21,7 +21,7 @@ const projects: Project[] = [
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
     githubUrl: "https://github.com/OlaHenrik08/nextjs-portfolio-ola",
     liveUrl: "https://nextjs-portfolio-ola.vercel.app/",
-    year: "2025",
+    year: "2026",
     status: "live",
   },
   {
@@ -31,7 +31,7 @@ const projects: Project[] = [
     tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
     githubUrl: "",
     liveUrl: "https://digilat-solutions.vercel.app/",
-    year: "2025",
+    year: "2026",
     status: "live",
   },
   {
@@ -41,7 +41,7 @@ const projects: Project[] = [
     tags: ["HTML", "CSS", "JavaScript", "JSON"],
     githubUrl: "https://github.com/OlaHenrik08/CLI-info-page",
     liveUrl: "https://cli-info-page.vercel.app/",
-    year: "2025",
+    year: "2026",
     status: "live",
   },
   {
@@ -51,7 +51,7 @@ const projects: Project[] = [
     tags: ["React", "JavaScript", "Tailwind CSS"],
     githubUrl: "",
     liveUrl: "",
-    year: "2025",
+    year: "2026",
     status: "coming-soon",
   },
   {
@@ -61,7 +61,7 @@ const projects: Project[] = [
     tags: ["JavaScript", "HTML", "CSS", "DOM"],
     githubUrl: "https://github.com/OlaHenrik08/Javascript-Learning",
     liveUrl: "https://javascript-learning-gamma.vercel.app/",
-    year: "2024",
+    year: "2026",
     status: "live",
   },
 ];
