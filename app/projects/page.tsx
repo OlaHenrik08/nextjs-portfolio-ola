@@ -165,8 +165,7 @@ export default function ProjectsPage() {
         </div>
 
         <p className="text-[#7a7872] mb-12 max-w-xl">
-          Her viser jeg et utvalg av prosjektene mine – alt fra webutvikling til
-          medieproduksjon og digitale kampanjer.
+          Her viser jeg et utvalg av prosjektene mine - alt fra webutvikling til digitale kampanjer.
         </p>
 
         {/* Filter pills */}
