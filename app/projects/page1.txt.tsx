@@ -3,6 +3,19 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
+// ============================================================
+// ✏️  LEGG TIL DINE PROSJEKTER HER
+// ============================================================
+// Bare kopier en ny blokk og fylle inn dine detaljer.
+// Feltene er:
+//   title       – Prosjektnavn
+//   description – Kort beskrivelse
+//   tags        – Teknologier / kategori (array av strings)
+//   githubUrl   – Link til GitHub-repo (la være "" hvis du ikke har)
+//   liveUrl     – Link til live demo (la være "" hvis du ikke har)
+//   year        – Året prosjektet ble laget
+// ============================================================
+
 interface Project {
   title: string;
   description: string;
@@ -10,62 +23,44 @@ interface Project {
   githubUrl: string;
   liveUrl: string;
   year: string;
-  status?: "live" | "coming-soon";
 }
 
 const projects: Project[] = [
+  // ← EKSEMPEL 1: Skriv inn ditt första prosjekt her
   {
-    title: "Next.js Portfolio",
+    title: "Mitt første prosjekt",
     description:
-      "Min personlige portfolio bygget med Next.js, TypeScript og Tailwind CSS. Fokus på ytelse, ren struktur og modern design med mørk fargepalett og flytende animasjoner.",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
-    githubUrl: "https://github.com/OlaHenrik08/nextjs-portfolio-ola",
-    liveUrl: "https://nextjs-portfolio-ola.vercel.app/",
+      "Beskriv hva prosjektet er, hva du laget og hva du lærte underveis. This is placeholder text – replace it with your own project description.",
+    tags: ["React", "Next.js", "Tailwind CSS"],
+    githubUrl: "", // ← Lim inn din GitHub-link her
+    liveUrl: "",   // ← Lim inn live demo-link her (valgfritt)
     year: "2025",
-    status: "live",
   },
+  // ← EKSEMPEL 2
   {
-    title: "Digital Solutions",
+    title: "Andre prosjekt",
     description:
-      "Min egen bedrift som tilbyr nettside-bygging, IT-support og vedlikehold for bedrifter som mangler teknisk kompetanse. Skreddersydde løsninger tilpasset kundens behov.",
-    tags: ["Next.js", "React", "Tailwind CSS", "TypeScript"],
-    githubUrl: "",
-    liveUrl: "https://digilat-solutions.vercel.app/",
-    year: "2025",
-    status: "live",
-  },
-  {
-    title: "CLI Info & Guide",
-    description:
-      "Interaktiv guide-side for kommandolinje-verktøy bygget med HTML, CSS og JavaScript. Fokus på CLI-estetikk med JSON-drevet innhold og clean terminal-design.",
-    tags: ["HTML", "CSS", "JavaScript", "JSON"],
-    githubUrl: "https://github.com/OlaHenrik08/CLI-info-page",
-    liveUrl: "https://cli-info-page.vercel.app/",
-    year: "2025",
-    status: "live",
-  },
-  {
-    title: "Project Manager",
-    description:
-      "Smart prosjektstyringsverktøy for å holde oversikt over egne prosjekter. Bygget med fokus på brukervennlig design og smart funksjonalitet.",
-    tags: ["React", "JavaScript", "Tailwind CSS"],
+      "Et annet eksempel. Beskriv prosjektet ditt her. Du kan ha so mange eller få prosjekter som du vil.",
+    tags: ["JavaScript", "HTML", "CSS", "Video"],
     githubUrl: "",
     liveUrl: "",
     year: "2025",
-    status: "coming-soon",
   },
+  // ← EKSEMPEL 3
   {
-    title: "JavaScript Learning Site",
+    title: "Tredje prosjekt",
     description:
-      "Interaktiv nettside laget for å øve på DOM-manipulasjon, event listeners og dynamisk innhold. Et praktisk læringsverktøy for JavaScript-konsepter.",
-    tags: ["JavaScript", "HTML", "CSS", "DOM"],
-    githubUrl: "https://github.com/OlaHenrik08/Javascript-Learning",
-    liveUrl: "https://javascript-learning-gamma.vercel.app/",
+      "Husker du et medieproduksjon-prosjekt? Du kan også legge inn dokumentarer, kampanjer eller andre typer arbeid her – ikke bare code.",
+    tags: ["Dokumentar", "Video", "Manus", "Redigering"],
+    githubUrl: "",
+    liveUrl: "",
     year: "2024",
-    status: "live",
   },
 ];
 
+// ============================================================
+// FILTER-KATEGORIER (auto-generert fra alle tags)
+// ============================================================
 function getAllTags(projects: Project[]): string[] {
   const tagSet = new Set<string>();
   projects.forEach((p) => p.tags.forEach((t) => tagSet.add(t)));
@@ -78,18 +73,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       className="card group p-6 flex flex-col hover:border-[#c8a96e]/30 transition-all duration-500"
       style={{ animationDelay: `${index * 80}ms` }}
     >
-      {/* Top row: year + status + links */}
+      {/* Top row: year + links */}
       <div className="flex items-start justify-between mb-4">
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-mono text-[#4a4842] bg-[#141414] border border-[#2a2a2a] px-3 py-1 rounded-sm">
-            {project.year}
-          </span>
-          {project.status === "coming-soon" && (
-            <span className="text-xs font-mono text-[#c8a96e] bg-[#c8a96e]/10 border border-[#c8a96e]/20 px-3 py-1 rounded-sm">
-              Coming soon
-            </span>
-          )}
-        </div>
+        <span className="text-xs font-mono text-[#4a4842] bg-[#141414] border border-[#2a2a2a] px-3 py-1 rounded-sm">
+          {project.year}
+        </span>
         <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           {project.githubUrl && (
             <Link
@@ -197,7 +185,7 @@ export default function ProjectsPage() {
         {filtered.length === 0 && (
           <div className="text-center py-24">
             <p className="text-[#4a4842] text-sm">
-              Ingen prosjekter i denne kategorien ennå.
+              Ingen prosjekter i denne kategorien yet.
             </p>
           </div>
         )}
