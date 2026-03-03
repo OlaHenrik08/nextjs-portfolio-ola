@@ -64,6 +64,16 @@ const projects: Project[] = [
     year: "2026",
     status: "live",
   },
+  {
+    title: "The Walking Dead Fan Page",
+    description:
+      "En stemningsfull fan-side inspirert av TV-serien The Walking Dead. Nettsiden har mørk, apokalyptisk design og presenterer karakterer, sesonger og ikoniske øyeblikk fra serien. Bygget med fokus på visuell stil, strukturert innhold og interaktivitet.",
+    tags: ["HTML", "CSS", "Tailwind CSS", "JavaScript"],
+    githubUrl: "https://github.com/OlaHenrik08/Zombie-page",
+    liveUrl: "https://zombie-page.vercel.app/",
+    year: "2026",
+    status: "live",
+  },
 ];
 
 function getAllTags(projects: Project[]): string[] {
