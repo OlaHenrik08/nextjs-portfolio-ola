@@ -74,7 +74,7 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#c8a96e]/20 to-transparent rounded-sm blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative overflow-hidden rounded-sm border border-[#2a2a2a] aspect-[3/4] bg-[#141414]">
                   <Image
-                    src="/photo-new.jpg"
+                    src="/public/photo-new.jpeg"
                     alt="Ola Henrik Bjørntvedt"
                     fill
                     className="object-cover object-top opacity-90 group-hover:opacity-100 transition-opacity duration-500"
